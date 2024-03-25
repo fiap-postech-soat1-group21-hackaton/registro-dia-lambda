@@ -1,0 +1,57 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  relatorio-dia-lambda
+
+Globals:
+  Function:
+    Timeout: 3
+    MemorySize: 128
+
+Parameters:
+  DBHost:
+    Type: String
+    Description: Host do banco de dados
+  DBUser:
+    Type: String
+    Description: Usuário do banco de dados
+  DBPassword:
+    Type: String
+    NoEcho: true
+    Description: Senha do banco de dados
+  DBName:
+    Type: String
+    Description: Nome do banco de dados
+  DBPort:
+    Type: String
+    Description: Porta do banco de dados
+  DBTable:
+    Type: String
+    Description: Tabela para operação no banco de dados
+
+Resources:
+  RelatorioDiaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: relatorio-dia
+      CodeUri: relatorio_dia/
+      Handler: app.lambda_handler
+      Runtime: python3.10
+      Architectures:
+      - x86_64
+      Environment:
+        Variables:
+          DB_HOST: !Ref DBHost
+          DB_USER: !Ref DBUser
+          DB_PASSWORD: !Ref DBPassword
+          DB_NAME: !Ref DBName
+          DB_PORT: !Ref DBPort
+          DB_TABLE: !Ref DBTable
+
+Outputs:
+  RelatorioDiaFunction:
+    Description: Relatorio Dia Lambda Function ARN
+    Value: !GetAtt RelatorioDiaFunction.Arn
+  RelatorioDiaFunctionIamRole:
+    Description: Implicit IAM Role created for Relatorio Dia function
+    Value: !GetAtt RelatorioDiaFunctionRole.Arn

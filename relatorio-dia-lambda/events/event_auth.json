@@ -1,0 +1,114 @@
+{
+    "resource": "/relatorio_dia",
+    "path": "/relatorio_dia",
+    "httpMethod": "GET",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Authorization": "eyJraWQiOiJuWGFvb3FuRzhYR09queryStringParametersTSEd4dm1ETUNtNlpHa3h2RVA1cHcrbndqTmx6ckRFPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiWEtrbTVEZWFPV0FKcXAyckpaM2dJUSIsInN1YiI6ImFlMTljY2Y5LTIwMjYtNDZlYi1iMDFjLTMyMTY3YmVkMzNlMiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV93QlZGQjBNT2IiLCJjb2duaXRvOnVzZXJuYW1lIjoiZGFuaWRhbmkiLCJhdWQiOiJqMWQ5OW1uZjBrNHBzaWIzcW5obm80bWR2IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MTEyODg4ODQsIm5hbWUiOiJEYW5pbG8iLCJleHAiOjE3MTEyOTI0ODQsImlhdCI6MTcxMTI4ODg4NCwianRpIjoiNTViYjc0NjUtMjhmYi00NDUyLThhMDctNTA2MzU3ZjEzMWMwIiwiZW1haWwiOiJhbnRob255LmRhbmlsb0BvdXRsb29rLmNvbS5iciJ9.LvUzQjLNWWCuzMsJvaASqgPkUIb33GoxatOs1vEp21QHa4x9w6ky5m7FjXkiqBSATcz9ywYBT_LGdWDfURh9BzidvWYHDvT0mFO5G82Fwrtkga75bhlCuiXHQQgHyfYl7AbLCFXLkZ7gO5YSrfxbEvRnArL9p9NaQJuW9w3rEwLLUkOdQR7ao9pqk20j3OJOvICRkcRg-qsVBWmbw8HTNGieHx-Xjtk3gBf-skgizG5vGfkIyR7luZKd4dREOOwWT23aMK6P5byt2fbhr8Yi0eiqMpD-hzE5WXq31DZ3BHEWmZV6xX-0EBhROstZCWM4g4YobW3DLgm7inkugA0iDQ",
+        "Cache-Control": "no-cache",
+        "Host": "3erae7zhg9.execute-api.us-east-1.amazonaws.com",
+        "Postman-Token": "33a5a8f2-7229-406f-92a7-c9065e8ac880",
+        "User-Agent": "PostmanRuntime/7.37.0",
+        "X-Amzn-Trace-Id": "Root=1-66003630-66ecc02129a26d0204bfc128",
+        "X-Forwarded-For": "177.181.7.135",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Authorization": [
+            "eyJraWQiOiJuWGFvb3FuRzhYR09TSEd4dm1ETUNtNlpHa3h2RVA1cHcrbndqTmx6ckRFPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiWEtrbTVEZWFPV0FKcXAyckpaM2dJUSIsInN1YiI6ImFlMTljY2Y5LTIwMjYtNDZlYi1iMDFjLTMyMTY3YmVkMzNlMiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV93QlZGQjBNT2IiLCJjb2duaXRvOnVzZXJuYW1lIjoiZGFuaWRhbmkiLCJhdWQiOiJqMWQ5OW1uZjBrNHBzaWIzcW5obm80bWR2IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MTEyODg4ODQsIm5hbWUiOiJEYW5pbG8iLCJleHAiOjE3MTEyOTI0ODQsImlhdCI6MTcxMTI4ODg4NCwianRpIjoiNTViYjc0NjUtMjhmYi00NDUyLThhMDctNTA2MzU3ZjEzMWMwIiwiZW1haWwiOiJhbnRob255LmRhbmlsb0BvdXRsb29rLmNvbS5iciJ9.LvUzQjLNWWCuzMsJvaASqgPkUIb33GoxatOs1vEp21QHa4x9w6ky5m7FjXkiqBSATcz9ywYBT_LGdWDfURh9BzidvWYHDvT0mFO5G82Fwrtkga75bhlCuiXHQQgHyfYl7AbLCFXLkZ7gO5YSrfxbEvRnArL9p9NaQJuW9w3rEwLLUkOdQR7ao9pqk20j3OJOvICRkcRg-qsVBWmbw8HTNGieHx-Xjtk3gBf-skgizG5vGfkIyR7luZKd4dREOOwWT23aMK6P5byt2fbhr8Yi0eiqMpD-hzE5WXq31DZ3BHEWmZV6xX-0EBhROstZCWM4g4YobW3DLgm7inkugA0iDQ"
+        ],
+        "Cache-Control": [
+            "no-cache"
+        ],
+        "Host": [
+            "3erae7zhg9.execute-api.us-east-1.amazonaws.com"
+        ],
+        "Postman-Token": [
+            "33a5a8f2-7229-406f-92a7-c9065e8ac880"
+        ],
+        "User-Agent": [
+            "PostmanRuntime/7.37.0"
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-66003630-66ecc02129a26d0204bfc128"
+        ],
+        "X-Forwarded-For": [
+            "177.181.7.135"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": {
+        "tipo": "dia",
+        "ano-mes": "2024-03"
+    },
+    "multiValueQueryStringParameters": {
+        "TableName": [
+            "relatorio_dia"
+        ]
+    },
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "uimgzg",
+        "authorizer": {
+            "claims": {
+                "at_hash": "XKkm5DeaOWAJqp2rJZ3gIQ",
+                "sub": "ae19ccf9-2026-46eb-b01c-32167bed33e2",
+                "email_verified": "true",
+                "iss": "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_XXXXXXX",
+                "cognito:username": "danidanilo",
+                "aud": "j1d99mnf0k4psib3qnhno4mdv",
+                "token_use": "id",
+                "auth_time": "1711288884",
+                "name": "Danilo",
+                "exp": "Sun Mar 24 15:01:24 UTC 2024",
+                "iat": "Sun Mar 24 14:01:24 UTC 2024",
+                "jti": "55bb7465-28fb-4452-8a07-506357f131c0",
+                "email": "danilo@email.com.br"
+            }
+        },
+        "resourcePath": "/relatorio_dia",
+        "httpMethod": "GET",
+        "extendedRequestId": "VI1noE_voAMEARw=",
+        "requestTime": "24/Mar/2024:14:18:24 +0000",
+        "path": "/default/relatorio_dia",
+        "accountId": "731771597147",
+        "protocol": "HTTP/1.1",
+        "stage": "default",
+        "domainPrefix": "3erae7zhg9",
+        "requestTimeEpoch": 1711289904517,
+        "requestId": "ff7b3684-e461-4352-bdca-967c05367d9c",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "177.181.7.135",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "PostmanRuntime/7.37.0",
+            "user": null
+        },
+        "domainName": "3erae7zhg9.execute-api.us-east-1.amazonaws.com",
+        "deploymentId": "yyslzr",
+        "apiId": "3erae7zhg9"
+    },
+    "body": null,
+    "isBase64Encoded": false
+}

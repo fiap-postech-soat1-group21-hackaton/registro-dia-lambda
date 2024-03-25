@@ -1,3 +1,15 @@
+# Ignorar diretórios e arquivos gerados localmente
+.sam
+.template.yaml
+.build
+.aws-sam
+samconfig.toml
+.vscode
+
+# Ignorar arquivos de configuração local
+env.json
+.senvrc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,39 @@
+on:
+    push:
+      branches:
+        - main
+jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+        env:
+          AWS_LAMBDA_REGISTRO_PONTO_REGION: ${{ vars.AWS_LAMBDA_REGISTRO_PONTO_REGION }}
+          AWS_LAMBDA_REGISTRO_PONTO_STACK_NAME: ${{ vars.AWS_LAMBDA_REGISTRO_PONTO_STACK_NAME }}
+          DB_HOST: ${{secrets.DB_HOST}}
+          DB_NAME: ${{secrets.DB_NAME}}
+          DB_PASS: ${{secrets.DB_PASS}}
+          DB_PORT: ${{secrets.DB_PORT}}
+          DB_USER: ${{secrets.DB_USER}}
+          DB_TABLE: ${{secrets.DB_TABLE}}
+
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-python@v5
+            - uses: aws-actions/setup-sam@v2
+              with:
+                use-installer: true
+            - uses: aws-actions/configure-aws-credentials@v4
+              with:
+                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                aws-region: ${{ vars.AWS_LAMBDA_REGISTRO_PONTO_REGION }}
+            - run: sam build --template relatorio-dia-lambda/template.yaml
+            - run: echo $AWS_LAMBDA_REGISTRO_PONTO_REGION
+            - run: sam deploy
+                --template-file .aws-sam/build/template.yaml
+                --no-confirm-changeset
+                --no-fail-on-empty-changeset 
+                --stack-name ${AWS_LAMBDA_REGISTRO_PONTO_STACK_NAME} 
+                --resolve-s3 
+                --capabilities CAPABILITY_IAM 
+                --region ${AWS_LAMBDA_REGISTRO_PONTO_REGION}
+                --parameter-overrides DBHost=$DB_HOST DBUser=$DB_USER DBPassword=$DB_PASS DBName=$DB_NAME DBPort=$DB_PORT DBTable=$DB_TABLE
